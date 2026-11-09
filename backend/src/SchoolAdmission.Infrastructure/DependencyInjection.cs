@@ -29,6 +29,7 @@ public static class DependencyInjection
 
         services.AddScoped<IClassService, ClassService>();
         services.AddScoped<IAdmissionHoldService, AdmissionHoldService>();
+        services.AddHostedService<ExpiredHoldCleanupService>();
 
         return services;
     }

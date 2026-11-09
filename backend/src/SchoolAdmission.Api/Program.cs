@@ -1,3 +1,4 @@
+using SchoolAdmission.Api.Middleware;
 using SchoolAdmission.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,8 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseSwagger();
 
