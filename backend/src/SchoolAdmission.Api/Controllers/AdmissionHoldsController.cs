@@ -4,7 +4,7 @@ using SchoolAdmission.Application.Interfaces;
 namespace SchoolAdmission.Api.Controllers;
 
 [ApiController]
-[Route("")]
+[Route("api")]
 public class AdmissionHoldsController : ControllerBase
 {
     private readonly IAdmissionHoldService _holdService;

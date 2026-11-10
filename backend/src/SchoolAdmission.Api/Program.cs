@@ -1,5 +1,9 @@
+using Microsoft.Extensions.Hosting;
 using SchoolAdmission.Api.Middleware;
+using SchoolAdmission.Domain.Entities;
 using SchoolAdmission.Infrastructure;
+using System.Net.Mime;
+using System.Reflection.PortableExecutable;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,3 +45,4 @@ app.MapControllers();
 app.MapGet("/", () => "School Admission API is running!");
 
 app.Run();
+
