@@ -46,24 +46,24 @@ The system manages school classes, seat availability, temporary admission reserv
 
 ```text
 SchoolAdmissionSystem/
-¦
+ 
 +-- backend/
-¦   +-- src/
-¦   ¦   +-- SchoolAdmission.Api/
-¦   ¦   +-- SchoolAdmission.Application/
-¦   ¦   +-- SchoolAdmission.Domain/
-¦   ¦   +-- SchoolAdmission.Infrastructure/
-¦   ¦
-¦   +-- tests/
-¦   ¦   +-- SchoolAdmission.Tests/
-¦   ¦
-¦   +-- Dockerfile
-¦
+    +-- src/
+        +-- SchoolAdmission.Api/
+        +-- SchoolAdmission.Application/
+        +-- SchoolAdmission.Domain/
+        +-- SchoolAdmission.Infrastructure/
+     
+    +-- tests/
+        +-- SchoolAdmission.Tests/
+     
+    +-- Dockerfile
+ 
 +-- frontend/
-¦   +-- src/
-¦   +-- public/
-¦   +-- Dockerfile.yml
-¦
+    +-- src/
+    +-- public/
+    +-- Dockerfile.yml
+ 
 +-- docker-compose.yml
 +-- ASSUMPTIONS.md
 +-- AI_USAGE.md
@@ -142,6 +142,7 @@ http://localhost:8080/api
 | GET | /holds/{holdId} | Get reservation status |
 | POST | /holds/{holdId}/confirm | Confirm admission |
 | DELETE | /holds/{holdId} | Cancel reservation |
+| GET | /me/holds | Get the current student's admission applications |
 
 For student-specific hold operations, provide the required `X-Student-Id` request header.
 
@@ -174,8 +175,8 @@ The test suite includes:
 
 ## 10. Documentation
 
-- `ASSUMPTIONS.md` — Business rules and implementation assumptions.
-- `AI_USAGE.md` — Disclosure of AI-assisted development.
+- `ASSUMPTIONS.md`   Business rules and implementation assumptions.
+- `AI_USAGE.md`   Disclosure of AI-assisted development.
 
 ## 11. Important Notes
 
